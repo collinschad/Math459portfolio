@@ -169,10 +169,9 @@
             \left| \langle a,b,0 \rangle \times \langle c,d,0 \rangle \right| &= \left| \langle a,b,0 \rangle \right| \left| \langle c,d,0 \rangle \right| \sin\alpha\\
             ab-cd &= \left| \langle a,b \rangle \right| \left| \langle c,d \rangle \right|\sin\alpha\\
             \implies \sin\alpha &= \frac{ab-cd}{\left| \langle a,b \rangle \right| \left| \langle c,d \rangle \right|}.
-        \end{align*}
+        \end{align*}\pagebreak
 
         Since \( \tan\alpha = \sin\alpha/\cos\alpha, \) we divide the two previous equalities for \( \sin\alpha \) and \( \cos\alpha \) to find tangent.
-
         \begin{align*}
             \tan\alpha &= \frac{\sin\alpha}{\cos\alpha}\\
             &= \frac{\displaystyle\frac{ab-cd}{\left| \langle a,b \rangle \right| \left| \langle c,d \rangle \right|}}{\displaystyle\frac{ac+bd}{\left| \langle a,b \rangle \right| \left| \langle c,d \rangle \right|}}\\
@@ -194,7 +193,7 @@
     \begin{solution}
         Consider the square below.
         \begin{center}
-        \includegraphics[width=.5\linewidth]{8}
+        \includegraphics[width=.4\linewidth]{8}
         \end{center}
         Each side has length \( \sqrt{2} , \) and thus the square has area \( \sqrt{2}^{2} = 2 \) and 2 is not a perfect square.
     \end{solution}
@@ -245,9 +244,10 @@
 \end{exercise}
 
 \begin{exercise}{12}
-    Construct (at least) 5 lattice polygons with different areas. Keep in mind that the polygons do not need to be convex! Find the area of each polygon. What do you observe? Make a conjecture about the possible values of the area of a lattice polygon based on your computation in this problem. For example, do you think it's possible to achieve all integer areas? All rational areas? All real areas?
+    Construct (at least) 5 lattice polygons with different areas. Keep in mind that the polygons do not need to be convex! Find the area of each polygon. What do you observe? Make a conjecture about the possible values of the area of a lattice polygon based on your computation in this problem. For example, do you think it's possible to achieve all integer areas? All rational areas? All real areas?\pagebreak
     \begin{solution}
-        The polygons are shown below, along with their areas.\\
+        The polygons are shown below, along with their areas.
+        
         \begin{center}
         \includegraphics[width=.5\linewidth]{12}
         \end{center}
@@ -258,14 +258,15 @@
 \begin{exercise}{13}
     Construct (at least) 5 different non-congruent primitive lattice triangles, and find their area. Make a conjecture about the value of the area of a primitive lattice triangle.
     \begin{solution}
-       The triangles are shown below, along with their areas.\\
+       The triangles are shown below, along with their areas.
+       
         \begin{center}
         \includegraphics[width=.5\linewidth]{13}
         \end{center}
         We conjecture that all primitive triangles have the same area, 1/2. This seems to follow nicely from an ancient result by Euclid concerning triangles who share a base and whose third side lies between the same parallels.
     \end{solution}
 \end{exercise}
-
+\pagebreak
 \begin{exercise}{14}
     Construct several (at least 5) different polygons that contain 4 boundary lattice points and 6 interior lattice points. Keep in mind that the polygons do not need to be convex. Find the area of each polygon. What do you observe? Make a conjecture based on your observations in this exercise.
     \begin{solution}
@@ -274,17 +275,16 @@
         \includegraphics[width=.7\linewidth]{14}
         \end{center}
     \end{solution}
-\end{exercise}
-
+\end{exercise}\pagebreak
 \begin{exercise}{15}
     Find the area of each of the lattice polygons in Figure 1. Make a table that contains the following information for each polygon: the area of the polygon, the number of lattice points inside the polygon (\( I \)), and the number of lattice points on the boundary of the polygon (\( B \)).
     \begin{solution}
         Figure 1 is shown below, and below figure 1 is a table of the areas, number of interior lattice points, and number of boundary lattice points for each polygon. Also shown is Figure 1 with each polygon partitioned into smaller polygons whose areas are easy to compute. This is how we computed area.
         \begin{center}
-            \includegraphics[width=.65\linewidth]{15}
+            \includegraphics[width=.5\linewidth]{15}
         \end{center}
         \begin{center}
-            \includegraphics[width=.65\linewidth]{15-1}
+            \includegraphics[width=.5\linewidth]{15-1}
         \end{center}
         \begin{center}
             \begin{tabular}{| r | l | l | l |}
@@ -330,7 +330,7 @@
             \end{tabular}
         \end{center}
     \end{solution}
-\end{exercise}
+\end{exercise}\pagebreak
 
 \begin{exercise}{16}
     Construct 5 different lattice polygons. To keep this problem interesting, at least 3 of your polygons should be non-convex. All of your polygons should have at least 6 sides, and at least 10 boundary lattice points and at least 8 interior lattice points. For each of these 5 polygons, find the area, the number of lattice points inside the polygon, and the number of lattice points on the boundary of the polygon. Add this information to your table from Exercise 15.
@@ -340,10 +340,10 @@
             \includegraphics[width=.7\linewidth]{16-1}
         \end{center}
         \begin{center}
-            \includegraphics[width=.6\linewidth]{16-2}
+            \includegraphics[width=.7\linewidth]{16-2}
         \end{center}
     \end{solution}
-\end{exercise}
+\end{exercise}\pagebreak
 
 \begin{exercise}{17}
     Let \( P \) be the triangle with vertices \( ( 0,1 ) , ( 3,1 ) , \) and \( ( 1,4 ) . \) Find the area of \( P \), the number of lattice points inside the polygon, and the number of lattice points on the boundary of the polygon. Add this to information to your table from Exercise 15.
@@ -362,7 +362,7 @@
         $$ A = I + \frac{1}{2} B -1.$$
         We arrived at this conjecture by examining the relation between various rows on the table in Exercise 15. We noticed that when the number of boundary points remained constant between polygons and the number of interior points increased by 1, then the area would increase by 1. Conversely, if the number of interior points stayed constant and the number of boundary points increased by 1, the area increased by 1/2. This led to us writing down and adjusting some equalities until we found one that generalized to all of the polygons we had worked with.
 
-        As far as evidence to the validity of the theorem, we have a few ideas. It seems that if one takes a polygon and adds an interior point, two primitive triangles spawn. Similarly, if one adds a boundary point, it seems that one primitive triangle spawns. If this is the case, this would account for the various increases provided by adjusting boundary and interior points.\\
+        As far as evidence to the validity of the theorem, we have a few ideas. It seems that if one takes a polygon and adds an interior point, two primitive triangles spawn. Similarly, if one adds a boundary point, it seems that one primitive triangle spawns. If this is the case, this would account for the various increases provided by adjusting boundary and interior points.
     \end{solution}
 \end{exercise}
 
@@ -432,7 +432,8 @@
 \begin{exercise}{25}
     Let \( p = ( m,n ) \) be a lattice point in the plane with \( \gcd(m,n) = 1. \) Show that there are no lattice points strictly between the origin \( \mathbf{0} = ( 0,0 ) \) and \( p \) on the line segment \( \mathbf{0}p. \)
     \begin{solution}
-        Assume WLOG that \( p \) is in the first quadrant of \( \Z^{2} . \) We don't lose generality by doing this, since divisibility and gcd are maintained regardless of sign.\\
+        Assume WLOG that \( p \) is in the first quadrant of \( \Z^{2} . \) We don't lose generality by doing this, since divisibility and gcd are maintained regardless of sign.
+        
         Assume for the sake of contradiction that there exists a point \( ( a,c ) \in \Z^{2} \) in between the origin and \( p \) lying on the segment \( \mathbf{0}p, \) i.e. that \( a < m \) and \( c < n. \) Since the two points lie on the same line, should be able to calculate the slop of the line in two different ways but obtain the same value.
         \begin{align*}
             \frac{n - 0}{m - 0} &= \frac{c - 0}{a - 0}\\
@@ -449,9 +450,12 @@
 \begin{exercise}{26}
     Show that if \( p = ( m,n ) \) is a visible point on the lattice line \( L, \) then any lattice point on \( L \) is of the form \( ( tm,tn ) \) for some integer \( t. \)
     \begin{solution}
-        It is important to note that a very simple proof of this exercise exists given the converse of number 25. However, we are not so easily appeased by low-hanging fruit. We proceed with our original argument, which illuminates some interesting geometric principles on the integer lattice.\\ [1ex]
-        Assume \( p = ( m,n ) \) is a visible point on the lattice line \( L. \) Let \( t \in \Z \backslash \{ 1 \} . \) Let \( \varphi_{t}  : \R^{2} \to \R^{2} \) be the map which sends \( ( a,b ) \) to \( ( a - (t-1)m ,b - (t-1)n)  \). We will first prove that the map preserves the lattice, i.e. that \( ( x,y ) \in \Z^{2} \) if and only if \( \varphi_{t}(( x,y )) \in \Z^{2}  \). Then we will prove that the map preserves ``betweenness'', i.e. \( ( a,b ) \) lies between two points on a line if and only if \( \varphi_{t} (( a,b )) \) lies between the image of those same points on the same line.\\ [1ex]
-        Assume \( ( a,b ) \in \Z^{2} . \) Then \( \varphi(( a,b ))_{t}  = ( a - (t-1)m, b-(t-1)n ) . \) Note that \( \Z \) is closed under subtraction and multiplication, so \( a-(t-1)m, b-(t-1)n \in \Z. \) Thus \( \varphi_{t} (( a,b )) \in \Z^{2} . \) The reverse direction is similar. Thus \( \varphi \) preserves the lattice.\\ [1ex]
+        It is important to note that a very simple proof of this exercise exists given the converse of number 25. However, we are not so easily appeased by low-hanging fruit. We proceed with our original argument, which illuminates some interesting geometric principles on the integer lattice.
+        
+        Assume \( p = ( m,n ) \) is a visible point on the lattice line \( L. \) Let \( t \in \Z \backslash \{ 1 \} . \) Let \( \varphi_{t}  : \R^{2} \to \R^{2} \) be the map which sends \( ( a,b ) \) to \( ( a - (t-1)m ,b - (t-1)n)  \). We will first prove that the map preserves the lattice, i.e. that \( ( x,y ) \in \Z^{2} \) if and only if \( \varphi_{t}(( x,y )) \in \Z^{2}  \). Then we will prove that the map preserves ``betweenness'', i.e. \( ( a,b ) \) lies between two points on a line if and only if \( \varphi_{t} (( a,b )) \) lies between the image of those same points on the same line.
+        
+        Assume \( ( a,b ) \in \Z^{2} . \) Then \( \varphi(( a,b ))_{t}  = ( a - (t-1)m, b-(t-1)n ) . \) Note that \( \Z \) is closed under subtraction and multiplication, so \( a-(t-1)m, b-(t-1)n \in \Z. \) Thus \( \varphi_{t} (( a,b )) \in \Z^{2} . \) The reverse direction is similar. Thus \( \varphi \) preserves the lattice.
+        
         Now assume \( ( a,b ) \in \R^{2} \) lies on the line segment between points \((x_{1} , y_{1}) \) and \( ( x_{2} , y_{2} ) . \) We will show that \( \varphi_{t}(( a,b )) \) lies on the line segment between points \( \varphi_{t}(( x_{1} , y_{1} )) \) and \( \varphi(( x_{2} , y_{2} )) \). To do this, we rely on a well-known fact concerning the formation of triangles, namely that a point \( C \) is on a line segment \( AB \) if and only if \( AC + CB = AB. \) We will now compute the necessary distances. Let \( d_{1} \) be the distance from \( ( x_{1} , y_{1} ) \) to \( ( a,b ) \), let \( d_{2}  \) be the distance from \( ( a,b ) \) to \( ( x_{2} , y_{2} ) , \) and let \( d_{3} \) be the length of the whole line segment, or the distance from \( ( x_{1} , y_{1} ) \) to \( ( x_{2}, y_{2} ) . \) We compute these distances.
         \begin{align*}
             d_{1} &= \sqrt{( a-x_{1} )^{2} + ( b-y_{1} )^{2}} \\
@@ -484,9 +488,11 @@
 \begin{exercise}{27}
     Let \( m \) and \( n \) be nonnegative integers. Show that there are exactly \( \gcd(m,n ) -1 \) lattice points on the line segment between the origin and the point \( ( m,n ) , \) not including the endpoints.
     \begin{solution}
-        Assume \( m \) and \( n \) are nonnegative integers. Note that \( m \) and \( n \) cannot both be 0, since there is no segment from the origin to itself.\\
-        Suppose first that \( m = 0. \) If \( m=0, \) then the line segment lies vertically on the \( y- \)axis. One can simply count the \( n-1 \) points on the vertical axis between the origin and \( ( 0,n ) , \) since they will all be of the form \( ( 0,k ) \) for \( k \in \{ 1, \ldots, n-1 \} . \) Thus there are \( n-1 \) points in this case, but we are not sure that \( \gcd(0,n) \) is even defined.\\
-        Suppose now that \( n = 0. \) The result is exactly the same, except now we have a horizontally aligned segment. We simply count the points of the form \( ( k, 0 ) \) for \( k \in \{ 1, \ldots, m-1 \} \) and we have \( m-1 \) points.\\
+        Assume \( m \) and \( n \) are nonnegative integers. Note that \( m \) and \( n \) cannot both be 0, since there is no segment from the origin to itself.
+        
+        Suppose first that \( m = 0. \) If \( m=0, \) then the line segment lies vertically on the \( y- \)axis. One can simply count the \( n-1 \) points on the vertical axis between the origin and \( ( 0,n ) , \) since they will all be of the form \( ( 0,k ) \) for \( k \in \{ 1, \ldots, n-1 \} . \) Thus there are \( n-1 \) points in this case, but we are not sure that \( \gcd(0,n) \) is even defined.
+        
+        Suppose now that \( n = 0. \) The result is exactly the same, except now we have a horizontally aligned segment. We simply count the points of the form \( ( k, 0 ) \) for \( k \in \{ 1, \ldots, m-1 \} \) and we have \( m-1 \) points.
         Lastly, suppose \( m \neq 0 \) and \( n\neq 0. \) Let \( d = \gcd(m,n) . \) The equation of the line through the origin and point \( ( m,n ) \) is of the form
         \begin{align*}
             y = \frac{n}{m} x.
@@ -872,8 +878,7 @@
             Since \( \det(A) = ad-bc = \pm 1 \) by assumption, \( c_{2} = \pm (af-ec) \in \Z. \) Similar computations will show that \( c_{1} = \pm ( de - bf ) \in \Z  . \) Thus we have found integers \( c_{1} \) and \( c_{2} \) which satisfy \( \langle a,c \rangle c_{1} + \langle b,d \rangle c_{2} = \langle e,f \rangle . \) So the columns of \( A \) span \( \Z^{2} . \) Thus the columns form a \( \Z \)-basis for \( \Z^{2} . \)
         \end{solution}
     \end{enumerate}
-\end{exercise}
-
+\end{exercise}\pagebreak
 \begin{exercise}{39}
     Sketch the parallelogram spanned by each of the bases that you constructed in Exercise 38.
     \begin{center}
@@ -1146,8 +1151,7 @@
         \includegraphics[width=.5\linewidth]{49-2}
     \end{center}
     \end{solution}
-\end{exercise}
-
+\end{exercise}\pagebreak
 \begin{exercise}{50}
     Show that the graph illustrated below contains a circuit.
     \begin{center}
@@ -1319,7 +1323,7 @@
         f = 2v - e_{b} -1.
     \end{align*}
     \begin{solution}
-        Note that \( e = e_{i} + e_{b} . \) Also, our graph consists of \( P \) dissected into \( f-1 \) primitive triangles. Each primitive triangle has two interior edges and one boundary edge as sides. Counting the total number of sides,
+        Note that \( e = e_{i} + e_{b} . \) Also, our graph consists of \( P \) dissected into \( f-1 \) primitive triangles. We will count the number of primitive lattice triangle sides present in our graph in two ways. First, each of the $f-1$ triangles have three sides. Also, each edge counted by $e_b$ is a side of one triangle, and each edge counted by $e_i$ is a side of two triangles. Counting the total number of sides,
         \begin{align*}
             3(f-1) = 3f - 3 &= e_{b} + 2 e_{i} \\
             &= e_{b} + 2 (e - e_{b}) \\
