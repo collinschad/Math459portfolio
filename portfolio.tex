@@ -60,6 +60,9 @@
         \newenvironment{exercise}[2][Exercise]{\begin{trivlist}
         \item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
 
+        \newenvironment{challenge}[2][Challenge Problem]{\begin{trivlist}
+        \item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+
         \newenvironment{theorem}[2][Theorem]{\begin{trivlist}
         \item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
     % Solution environment
@@ -247,7 +250,7 @@
     Construct (at least) 5 lattice polygons with different areas. Keep in mind that the polygons do not need to be convex! Find the area of each polygon. What do you observe? Make a conjecture about the possible values of the area of a lattice polygon based on your computation in this problem. For example, do you think it's possible to achieve all integer areas? All rational areas? All real areas?\pagebreak
     \begin{solution}
         The polygons are shown below, along with their areas.
-        
+
         \begin{center}
         \includegraphics[width=.5\linewidth]{12}
         \end{center}
@@ -259,7 +262,7 @@
     Construct (at least) 5 different non-congruent primitive lattice triangles, and find their area. Make a conjecture about the value of the area of a primitive lattice triangle.
     \begin{solution}
        The triangles are shown below, along with their areas.
-       
+
         \begin{center}
         \includegraphics[width=.5\linewidth]{13}
         \end{center}
@@ -433,7 +436,7 @@
     Let \( p = ( m,n ) \) be a lattice point in the plane with \( \gcd(m,n) = 1. \) Show that there are no lattice points strictly between the origin \( \mathbf{0} = ( 0,0 ) \) and \( p \) on the line segment \( \mathbf{0}p. \)
     \begin{solution}
         Assume WLOG that \( p \) is in the first quadrant of \( \Z^{2} . \) We don't lose generality by doing this, since divisibility and gcd are maintained regardless of sign.
-        
+
         Assume for the sake of contradiction that there exists a point \( ( a,c ) \in \Z^{2} \) in between the origin and \( p \) lying on the segment \( \mathbf{0}p, \) i.e. that \( a < m \) and \( c < n. \) Since the two points lie on the same line, should be able to calculate the slop of the line in two different ways but obtain the same value.
         \begin{align*}
             \frac{n - 0}{m - 0} &= \frac{c - 0}{a - 0}\\
@@ -451,11 +454,11 @@
     Show that if \( p = ( m,n ) \) is a visible point on the lattice line \( L, \) then any lattice point on \( L \) is of the form \( ( tm,tn ) \) for some integer \( t. \)
     \begin{solution}
         It is important to note that a very simple proof of this exercise exists given the converse of number 25. However, we are not so easily appeased by low-hanging fruit. We proceed with our original argument, which illuminates some interesting geometric principles on the integer lattice.
-        
+
         Assume \( p = ( m,n ) \) is a visible point on the lattice line \( L. \) Let \( t \in \Z \backslash \{ 1 \} . \) Let \( \varphi_{t}  : \R^{2} \to \R^{2} \) be the map which sends \( ( a,b ) \) to \( ( a - (t-1)m ,b - (t-1)n)  \). We will first prove that the map preserves the lattice, i.e. that \( ( x,y ) \in \Z^{2} \) if and only if \( \varphi_{t}(( x,y )) \in \Z^{2}  \). Then we will prove that the map preserves ``betweenness'', i.e. \( ( a,b ) \) lies between two points on a line if and only if \( \varphi_{t} (( a,b )) \) lies between the image of those same points on the same line.
-        
+
         Assume \( ( a,b ) \in \Z^{2} . \) Then \( \varphi(( a,b ))_{t}  = ( a - (t-1)m, b-(t-1)n ) . \) Note that \( \Z \) is closed under subtraction and multiplication, so \( a-(t-1)m, b-(t-1)n \in \Z. \) Thus \( \varphi_{t} (( a,b )) \in \Z^{2} . \) The reverse direction is similar. Thus \( \varphi \) preserves the lattice.
-        
+
         Now assume \( ( a,b ) \in \R^{2} \) lies on the line segment between points \((x_{1} , y_{1}) \) and \( ( x_{2} , y_{2} ) . \) We will show that \( \varphi_{t}(( a,b )) \) lies on the line segment between points \( \varphi_{t}(( x_{1} , y_{1} )) \) and \( \varphi(( x_{2} , y_{2} )) \). To do this, we rely on a well-known fact concerning the formation of triangles, namely that a point \( C \) is on a line segment \( AB \) if and only if \( AC + CB = AB. \) We will now compute the necessary distances. Let \( d_{1} \) be the distance from \( ( x_{1} , y_{1} ) \) to \( ( a,b ) \), let \( d_{2}  \) be the distance from \( ( a,b ) \) to \( ( x_{2} , y_{2} ) , \) and let \( d_{3} \) be the length of the whole line segment, or the distance from \( ( x_{1} , y_{1} ) \) to \( ( x_{2}, y_{2} ) . \) We compute these distances.
         \begin{align*}
             d_{1} &= \sqrt{( a-x_{1} )^{2} + ( b-y_{1} )^{2}} \\
@@ -489,9 +492,9 @@
     Let \( m \) and \( n \) be nonnegative integers. Show that there are exactly \( \gcd(m,n ) -1 \) lattice points on the line segment between the origin and the point \( ( m,n ) , \) not including the endpoints.
     \begin{solution}
         Assume \( m \) and \( n \) are nonnegative integers. Note that \( m \) and \( n \) cannot both be 0, since there is no segment from the origin to itself.
-        
+
         Suppose first that \( m = 0. \) If \( m=0, \) then the line segment lies vertically on the \( y- \)axis. One can simply count the \( n-1 \) points on the vertical axis between the origin and \( ( 0,n ) , \) since they will all be of the form \( ( 0,k ) \) for \( k \in \{ 1, \ldots, n-1 \} . \) Thus there are \( n-1 \) points in this case, but we are not sure that \( \gcd(0,n) \) is even defined.
-        
+
         Suppose now that \( n = 0. \) The result is exactly the same, except now we have a horizontally aligned segment. We simply count the points of the form \( ( k, 0 ) \) for \( k \in \{ 1, \ldots, m-1 \} \) and we have \( m-1 \) points.
         Lastly, suppose \( m \neq 0 \) and \( n\neq 0. \) Let \( d = \gcd(m,n) . \) The equation of the line through the origin and point \( ( m,n ) \) is of the form
         \begin{align*}
@@ -1371,4 +1374,213 @@
         \end{align*}
     \end{solution}
 \end{exercise}
+
+\begin{exercise}{72}
+    Use Pick's Theorem to prove that it is not possible to construct an equilateral lattice triangle.
+    \begin{solution}
+        Suppose not, that there exists an equilateral lattice triangle \( T. \) By Pick's Theorem, the area of the triangle \( A(T) = \frac{1}{2} bh \) must be a rational. Recall, the height of an equilateral triangle with base \( b \) is \( \frac{\sqrt{3}}{4} b. \) Thus \( A(T) = \frac{\sqrt{3}}{4} b^{2} . \) Recall, the square of the length of any lattice segment is an integer. Thus \( b^{2} \in \Z. \) Thus \( \frac{\sqrt{3}}{4} b^{2} \notin \Q. \) Thus \( A(T) \in \Q \) and \( A(T) \notin \Q. \) We have a contradiction, and thus it is impossible to construct an equilateral lattice triangle.
+    \end{solution}
+\end{exercise}
+
+\begin{exercise}{73}
+    Use Pick's Theorem to show that the area of a primitive lattice triangle is equal to 1/2.
+    \begin{solution}
+        Let \( T \) be a primitive lattice triangle. By Pick's Theorem, \( A(T) = 1/2 B(T) + I(T) -1. \) By the definition of primitive lattice triangle, \( B(T) = 3, I(T) = 0 . \) Thus \( A(T) = 3/2 - 1 = 1/2. \)
+    \end{solution}
+\end{exercise}
+
+\begin{exercise}{74}
+    Use Pick's Theorem to show that if it is possible to construct a regular lattice \( n \)-gon then \( \tan(\pi /n) \) is rational.
+    \begin{solution}
+        Let \( n \in \Z^{+} . \) Assume there exists a regular lattice \( n \)-gon \( P \). Choose \( a,s \in \R \) such that \( a \) is the apothem of \( P \) and \( s \) is the length of one side of \( P. \) We can dissect \( P \) into \( n \) equilateral triangles, whose heights are \( a \) and whose side lengths are \( s. \) Let \( T \) be such a triangle. Let \( \alpha \) be the measure of the angle formed when the central angle of \( P \) is divided by the altitude of \( T . \) Now \( \alpha = \pi /n \) since the central angle of \( P \) has measure \( 2 \pi /n. \) Also, \[ h = \frac{s}{2 \tan \frac{\pi}{n}} . \] Thus \[ A(T) = \frac{1}{2} (s) \left( \frac{s}{2\tan \frac{\pi}{n}} \right) = \frac{s^{2}}{4 \tan \frac{\pi}{n}}. \]
+        Since \( s \) is a lattice length, its square is an integer. Now suppose \( \tan \frac{\pi}{4} \notin \Q. \) So \( A(T) \notin \Q. \) By Pick's Theorem, \( A(T) \in \Q. \) So \( A(T) \in \Q \) and \( A(T) \notin \Q, \) a contradiction. Thus \( \tan \frac{\pi}{n} \in \Q. \)
+    \end{solution}
+\end{exercise}
+
+\begin{exercise}{75}
+    Show that if \( P \) is a convex lattice pentagon, then the area of \( P \) must be greater than or equal to \( 5/2. \) Is this bound strict? In other words, is it possible to construct a convex lattice pentagon with area equal to \( 5/2? \)
+    \begin{solution}
+        Since \( P \) is a lattice pentagon, by Pick's theorem,
+        \[ A(P) = \frac{1}{2} B(P) + I(P)  - 1. \]
+        Note that \( B(P) \geq 5 \) since \( P \) is a pentagon. Note that if either \( B(P) \geq 7 \) or \( I(P)  \geq 1, \) \( A(P) \) is greater than or equal to \( 5/2. \) To see this, assume \( B(P) \geq 7. \) Then
+        \begin{align*}
+            A(P) &= \frac{1}{2} B(P) + I(P) -1\\
+            &\geq \frac{7}{2} + I(P) - 1\\
+            &\geq \frac{7}{2} -1 = \frac{5}{2} .
+        \end{align*}
+        Now assume \( I(P) \geq 1 . \) Then
+        \begin{align*}
+            A(P) &= \frac{1}{2} B(P) + I(P) -1\\
+            &\geq \frac{5}{2} + 1 - 1 = \frac{5}{2} .
+        \end{align*}
+        We will proceed by showing that either \( B(P) \geq 7 \) or \( I(P) \geq 1. \) First consider the possible parities of the vertices of the pentagon (possible since the points are on the lattice). Either both coordinates are even, both are odd, or the first is even and the second is odd, or the first is odd and the second is even. There are thus four possibilities. By the Pigeonhole Principle, two vertices of the pentagon must share parity arrangement, i.e. there must be two points with piecewise equal parity.
+
+        Let these points be \( (a,b) \) and \( (c,d) . \) Now \( a \) and \( c, \) and \( b \) and \( d \) share parity by assumption. Recall that the sum of two even integers and the sum of two odd integers are both even. Thus \( a + c \in 2\Z \) and \( b + d \in 2\Z \).
+
+        Connect the segment between \( (a,b) \) and \( (c,d) . \) Note that each point on the segment lies within the pentagon, since the pentagon is convex. Consider the midpoint of the segment, \( (\frac{a + c}{2} , \frac{b + d}{2}) . \) We know this point is in the lattice since each sum is even. There are two possibilities.
+
+        If \( (a,b) \) and \( (c,d) \) are not adjacent points, the midpoint lies within the pentagon, and is thus counted by \( I(P) . \) Thus \( I(P) \geq 1 \) and \( A(P) \geq 5/2 \) as discussed above.
+
+        If \( (a,b) \) and \( (c,d) \) are adjacent, then the midpoint lies on the boundary of \( P \) and is thus counted by \( B(P) , \) so \( B(P) \geq 6. \) Now there are 6 boundary points, and 4 possible parity configurations, so choose the point which shares parity with the midpoint. If this point is not adjacent to the midpoint, draw the midpoint of the segment connecting that point and the midpoint, and we have a point counted by \( I(P) \) as in the first case. If the midpoint shares parity with an adjacent side, form the midpoint (which must be a lattice point), and that new midpoint will also lie on the boundary of \( P . \) Thus \( B(P) \geq 7 \) and \( A(P) \geq 5/2. \)
+
+        The inequality is not strict. See an example of a convex lattice pentagon with area equal to \( 5/2 \) below.
+        \begin{center}
+            \includegraphics[scale=.5]{75}
+        \end{center}
+    \end{solution}
+\end{exercise}
+
+\begin{exercise}{76}
+    Let \( A \) denote the point \( (n,0) \) and let \( B \) denote the point \( (0, n) . \) There are \( n-1 \) lattice points, each of the form \( (i,n-i), \) for \( i = 1,2,3, \dots ,n-1, \) between \( A \) and \( B \). Connect each one of them with the origin \( O (0,0) . \) The lines divide \( \triangle OAB \) into \( n \) smaller triangles. It is clear that the 2 triangles next to the axes contain no lattice points in their interior . Prove that if \( n \) is prime, then each of the remaining triangles contains exactly the same number of interior lattice points. Find an expression (in terms of \( n \)) for the number of interior lattice points in each of these triangles.
+    \begin{solution}
+        Suppose \( n \) is prime. We will begin by showing each point between \( A \) and \( B \) is visible. Let \( i \in \{1,2,3, \dots , n-1\} . \) Since \( n \) is prime, \( \gcd(n, i) = 1. \) By Bezout's Identity, there exist \( q,r \in \Z \) such that \( qi + rn = 1. \) Choose such a \( q \) and \( r \). Let \( c = q + r. \) Note, \( c \in \Z \) since \( \Z \) is closed under addition. Substituting,
+        \begin{align*}
+            1 &= qi + rn \\
+            &= (c-r) i + rn\\
+            &= ci - ri + rn \\
+            &= ci + r (n-i) \\
+        \end{align*}
+        Note \( \gcd(i, n-i) \) must divide \( 1 \) since we have produced a linear combination of \( i \) and \( n-i \) which is 1. Thus \( \gcd(i,n-i) = 1. \) By a previous exercise, the point \( (i,n-i) \) is visible from the origin.
+
+        Each of the small triangles have the same base length. Moreover, they are contained within the same parallels (they have the same height), and they thus, by Euclid, have the same area. By Pick's Theorem, the area of a lattice triangle is \( A = \frac{1}{2} B + I -1. \) For each of the triangles not adjacent to the axes, we have shown \( B = 3, \) since each vertex of these triangles (other than the origin), are visible. Therefore, since each of said triangles have the same area and the same number of boundary points, they have the same number of interior lattice points.
+
+        To find a closed form expression, we will solve for the area of the large triangle \( T \) in terms of \( I \) for the smaller triangles. By Pick's Theorem, \( A(T) = \frac{1}{2} B(T) + I(T) -1. \) To compute \( B(T) , \) note that there are \( n-1 \) lattice points on each side of the triangle, along with the 3 vertices. Thus \( B(T) = 3(n-1) + 3. \)
+
+        To compute \( I(T) , \) note that each interior point counted by \( I(T) \) is contained within a small triangle not adjacent to the axes. Denote the \( i \)-th small triangle not adjacent to the axes by tri\(_{i} . \) Thus, \[ I(T) = \sum_{i=1}^{n-2} I(\text{tri}_{i}) = (n-2) I(\text{tri}_{1} ) . \]
+
+        Also, the area of the large triangle is \( \frac{n^{2}}{2} \) by the conventional triangle area formula. So,
+        \begin{align*}
+            A(T) = \frac{n^{2}}{2} &= \frac{1}{2} B(T) + I(T) -1 \\
+            &= \frac{3 n}{2} + I(T) -1\\
+            &= \frac{3n}{2} + (n-2) I(\text{tri}_{1})
+        \end{align*}
+        Solving for \( I(\text{tri}_{1}) , \) we see $I(\text{tri}_{1}) = \frac{n-1}{2}$.
+    \end{solution}
+\end{exercise}
+
+\begin{exercise}{77}
+    Let \( n \) be an integer greater than or equal to 3. Prove that there is a set of \( n \) points in the plance such that the distance between any 2 points is irrational and each set of three points determines a non-degenerate triangle with rational area.
+    \begin{solution}
+        Let \( A = \{(a, a^{2}) : a \in \Z^{+} \} . \) Let \( (a, a^{2}) \) and \( (b,b^{2}) \) be two points in \( A. \) Let \( d \) be the distance between the two points. So
+        \begin{align*}
+            d &= \sqrt{(a-b)^{2} + (a^{2} - b^{2})^{2}} \\
+            &= \left|a - b\right| \sqrt{1 + (a + b)^{2} } .
+        \end{align*}
+        Suppose \( d \) is rational. Then \( \sqrt{1 + (a + b)^{2}} \in \Q \) since \( \left|a-b\right| \in \Q. \) Choose \( k \in \Z \) such that \( k^{2} = 1 + (a +b)^{2} . \) So
+        \begin{align*}
+            k^{2} - (a + b)^{2} = 1\\
+            (k - (a + b)) (k + (a + b)) = 1.
+        \end{align*}
+        Since \( k- (a +b) \) and \( k + (a + b) \) are integers which multiply to 1, \( k - a - b = k + a + b .\) Thus \( -2 (a + b) = 0 \) and \( a + b = 0. \) This is impossible, since \( a,b \in \Z^{+} . \) Thus \( d \) is irrational.
+
+        Each of the points in \( A \) are lattice points, so by Pick's Theorem any polygon whose vertices are in \( A \) has rational area. Any three points in \( A \) are guaranteed to be non-collinear according to the graph of \( A. \)
+    \end{solution}
+\end{exercise}
+
+\begin{exercise}{78}
+    Show that if \( T \) is a lattice triangle with \( I(T) = 1, \) then \( B(T) = 3, 4, 6, 8 , \) or 9.
+    \begin{solution}
+        Let \( T \) be a lattice triangle with \( I(T) = 1. \) Perform necessary translations to fix on vertex of \( T \) at the origin. Let \( (a,b) , (c,d) \in \Z^{2} \) be the other two vertices. Let \( x = \gcd(a,b) , y = \gcd(c,d) \), and \( z = \gcd(a-c, b-d) . \) We will now show that \( xy, xz, \) and \( yz \) divide \( B(T) . \)
+
+        By Pick's Theorem, \( A(T) = \frac{1}{2} B(T) . \) Computing the area another way,
+        \begin{align*}
+            A(T) &= \frac{1}{2} \det
+            \begin{bmatrix}
+                a & c\\
+                b & d
+            \end{bmatrix}\\
+            &= \frac{1}{2} \det
+            \begin{bmatrix}
+                x \frac{a}{x} & y \frac{c}{y} \\
+                x \frac{b}{x} & y \frac{d}{y}
+            \end{bmatrix}\\
+            &= \frac{1}{2} \det
+            \begin{bmatrix}
+                x \frac{a}{x} & x \frac{b}{x} \\
+                y \frac{c}{y} & y\frac{d}{y}
+            \end{bmatrix}\\
+            &= \frac{1}{2} xy \det
+            \begin{bmatrix}
+                \frac{a}{x} & \frac{b}{x} \\
+                \frac{c}{y} & \frac{d}{y}
+            \end{bmatrix}
+        \end{align*}
+        Note that \( x , y \neq 0 \) since they are greatest common divisors, so the above computations are valid. Now \( \det
+            \begin{bmatrix}
+                \frac{a}{x} & \frac{b}{x} \\
+                \frac{c}{y} & \frac{d}{y}
+            \end{bmatrix} \in \Z\)
+            since each of the terms are integers. Thus \( B(T) = xy \det
+            \begin{bmatrix}
+                \frac{a}{x} & \frac{b}{x} \\
+                \frac{c}{y} & \frac{d}{y}
+            \end{bmatrix}
+        \) and \( xy \) divides \( B(T) . \) Similar computations show that \( yz \) and \( xz \) also divide \( B(T) . \)
+
+        Without loss of generality, assume \( x \geq y \geq z. \) Since \( x + y + z = B(T) , \) at least one of \( x,y,z \) are greater than or equal to \( \frac{1}{3} B(T) . \) Without loss of generality, assume \( x \geq \frac{1}{3} B(T) . \) Since \( xy  \) divides \( B(T) , \) \( x \) divides \( B(T) . \) Choose \( l \in \Z^{+}  \) such that \( x l = B(T) . \) So \begin{align*}
+            x \geq \frac{1}{3}B(T) = \frac{1}{3} x l \implies l \leq 3 .
+        \end{align*}
+        Since \( l \in \Z^{+} , \) \( l \in \{1,2,3\} \). Note that \( l \) cannot be \( 1 \) since if \( l = 1 ,\) then \( x + y + z = B(T) + y + z = B(T) \implies y+z = 0.\) This is impossible since \( y,z \in \Z^{+} . \)
+
+        Assume \( x = \frac{1}{2} B(T) . \) This means one of \( y,z \) are greater than or equal to \( \frac{1}{4} B(T) . \) Without loss of generality, assume \( y \geq \frac{1}{4} B(T) . \) Since \( xy | B(T) , y | B(T) . \) Choose \( k \in \Z^{+} \) such that \( yk = B(T) . \) Thus \begin{align*}
+            y \geq \frac{1}{4} yk \implies k \leq 4 \implies k \in \{1,2,3,4\} .
+        \end{align*}
+        If \( k = 1 , \) then \( x + y + z = \frac{1}{2} B(T) + B(T) + z = B(T) , \) implying \( z < 0. \) Thus \( k \neq 1. \)
+
+        Similarly, if \( k = 2 , \) then \( z = 0. \) So \( k \neq 2 . \)
+
+        If \( k = 3, \) then \( y = \frac{1}{3} B(T) . \) Since \( xy | B(T) , \frac{1}{6} B(T)^{2} | B(T) .\) Choose \( l \in \Z \) such that \( \frac{1}{6} B(T)^{2} l = B(T) . \) Thus \( 6 = B(T) l\) and \( B(T) | 6. \)
+
+        If \( k = 4, \) then \( y = \frac{1}{4} B(T) . \) Since \( xy | B(T) , \frac{1}{8} B(T)^{2} | B(T) .\) Choose \( l \in \Z \) such that \( \frac{1}{8} B(T)^{2} l = B(T) . \) Thus \( 8 = B(T) l\) and \( B(T) | 8. \)
+
+        Now assume \( x = \frac{1}{3} B(T) . \) So one of \( y, z \) are greater than or equal to \( \frac{1}{3} B(T) , \) assume without loss of generality \( y \geq \frac{1}{3} B(T) . \) Since \( y | B(T) , \) there is a \( k \in \Z^{+} \) such that \( yk = B(T) . \) So
+        \begin{align*}
+            y \geq \frac{1}{3} yk \implies k \leq 3 \implies k \in \{1,2,3\} .
+        \end{align*}
+        If \( k = 1, \) then \( x + y+ z = \frac{1}{3} B(T) + B(T) + z = B(T) \implies z < 0, \) so \( k \neq 1 \).
+
+        If \( k = 2, \) then \( y = \frac{1}{2} B(T) . \) Since \( xy | B(T) , \frac{1}{6} B(T)^{2} | B(T) .\) Choose \( l \in \Z \) such that \( \frac{1}{6} B(T)^{2} l = B(T) . \) Thus \( 6 = B(T) l\) and \( B(T) | 6. \)
+
+        If \( k = 3, \) then \( y = \frac{1}{3} B(T) . \) Since \( xy | B(T) , \frac{1}{9} B(T)^{2} | B(T) .\) Choose \( l \in \Z \) such that \( \frac{1}{9} B(T)^{2} l = B(T) . \) Thus \( 9 = B(T) l\) and \( B(T) | 9. \)
+
+
+    \end{solution}
+\end{exercise}
+
+\begin{challenge}{2}
+    In the following figure, there are 5 examples of polygons with holes. Polygons \( A,B,C \) have one hole and polygons \( D \) and \( E \) have 2 holes. Find the area of each of these polygons. Make a table that contains the following information for each polygon: \( I, B, \) area, number of holes. Doing more examples if necessary, modify Pick's Theorem to conjecture and prove a formula that works for polygons with holes.
+    \begin{center}
+        \includegraphics[width = .6\linewidth]{Challenge2-2}
+    \end{center}
+    \begin{solution}
+        See the chart below.
+    \begin{center}
+        \includegraphics[width = .4\linewidth]{Challenge2-1}
+    \end{center}
+        We conjecture that the area of the polygon with holes if \( A(P) = \frac{1}{2} B(P) + I(P) -1 + h \) where \( h \) is the number of holes in the polygon.
+
+        To prove this, we will compute the area of the polygon without holes, then subtract the area of the holes themselves. For notation's sake, let \( P \) be the polygon without holes and let \( P_{h} \) be the polygon with holes. Also, let the set of holes be \( \{H_{i} : 0 \leq i \leq h\} \).
+
+        By Pick's Theorem, \begin{align*}
+            A(P_{h}) &= A(P) - \sum_{i = 1}^{h} A(H_{i}) \\
+            &= \frac{1}{2} B(P) + I(P) - 1 - \sum_{i = 1}^{h}\left( \frac{1}{2} B(H_{i} ) + I(H_{i}) - 1\right)   .
+        \end{align*}
+
+        In order to do some cancelling, let's rewrite \( B(P) \) and \( I(P) \). So \( B(P) \) is equal to \( B(P_{h}) \) minus the sum of the boundary points of the holes. So \begin{align*}
+            B(P) = B(P_{h}) - \sum_{i = 1}^{h} B(H_{i}).
+        \end{align*}
+        Also, \( I(P) \) is the sum of the boundary points of the holes, and the sum of the interior points of the holes, and the number of interior points of \( P_{h} \). Thus \begin{align*}
+            I(P) = P_{h} + \sum_{i = 1}^{h} \left( B(H_{i}) + I(H_{i}) \right) .
+        \end{align*}
+        Substituting this into our area formula, we have
+        \begin{align*}
+            A(P_{h}) &= A(P) - \sum_{i = 1}^{h} A(H_{i}) \\
+            &= \frac{1}{2} B(P) + I(P) - 1 - \sum_{i = 1}^{h}\left( \frac{1}{2} B(H_{i} ) + I(H_{i}) - 1\right)\\
+            &= \frac{1}{2} \left( B(P_{h}) - \sum B(H_{i}) \right) + \left( I(P_{h}) + \sum \left( B(H_{i}) + I(H_{i}) \right) \right) - 1 - \sum\left( \frac{1}{2} B(H_{i} ) + I(H_{i}) - 1\right)\\
+            &= \frac{1}{2} B(P_{h}) + I(P_{h}) -1 + \sum \left(- \frac{1}{2} B(H_{i}) + B(H_{i}) - \frac{1}{2} B(H_{i}) + I(H_{i}) - I(H_{i}) + 1\right)\\
+            &= \frac{1}{2} B(P_{h}) + I(P_{h}) -1 + h.
+        \end{align*}
+    \end{solution}
+\end{challenge}
+
 \end{document}
